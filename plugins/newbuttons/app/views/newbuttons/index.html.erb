@@ -1,0 +1,22 @@
+<h2>Настройки</h2>
+
+<% @newbuttons.each do |btn| %>
+  <div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @newbutton do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :active %>
+      <%= f.text_field :active, class: 'form-control' %>
+
+      <%= f.label :status %>
+      <%= f.text_field :status, class: 'form-control' %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  </div>
+<% end %>
